@@ -120,6 +120,25 @@ rpfcaf:
     - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
     - {name: 'PARAMETER', defaultValue: '&quot;props&quot;'}
 
+rca:
+  description: Create a pure function component using arrow function
+  tpl: |
+    import React from 'react';
+    import PropTypes from 'prop-types';
+
+    const $COMPONENT$ = ($PARAMETER$) => (
+      <div>$END$</div>
+    );
+
+    $COMPONENT$.propTypes = {};
+    $COMPONENT$.defaultProps = {};
+
+    export default $COMPONENT$;
+
+  variables:
+    - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
+    - {name: 'PARAMETER', defaultValue: '&quot;props&quot;'}
+
 rcc:
   description: Create a React.js component
   tpl:
